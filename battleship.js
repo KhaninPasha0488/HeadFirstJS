@@ -13,6 +13,19 @@ messageArea.innerHTML = msg;
    },
 
 };
-view.displayMiss("00");
-view.displayHit("34");
-view.displayMessage("Heloo !");
+
+var model = {
+   boardSize: 7,
+   numShips: 3,
+   shipsSunk: 0,
+   shipsLength: 3,
+   ships: [ {locations:["06","16","26"],hits: ["","",""]},
+                   {locations:["24","34","44"],hits: ["","",""]},
+                   {locations:["10","11","12"],hits: ["","",""]} ],
+   fire: function(guess){
+      for (var i = 0; i < this.numShips; i++) {
+         var ship = this.ships[i];
+         location = ship.location;
+      }
+   }               
+};
